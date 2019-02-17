@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<body>
+<title>FormSurvey</title>
+<h1 id="title">Survey Form</h1><!--#1-->
+<div id="form-outer">
+  <p id="description"><!--#2-->
+    Interviews of participants in the competition according to acquired skills
+  </p>
+  <form id="survey-form" <!--#3-->
+			<section>
+				<div class="labels">
+					<label id="name-label" for="name"> Name: </label> 
+				</div>
+				<div> 
+					<input autofocus type="text" name="name" id="name" class="input-field" placeholder="Enter your name" required> <!--#4-->
+				</div>
+			</section>
+			<section>
+				<div class="labels">
+					<label id="email-label" for="email"> Email: </label>
+				</div>
+				<div>
+					<input type="email" name="email" id="email" class="input-field" required placeholder="Enter your Email - exempl@gmail.com"> <!--#5-->
+				</div>
+			</section>
+			<section>
+				<div class="labels">
+					<label id="number-label" for="number"> Number: </label>
+				</div>
+				<div>
+					<input type="number" name="number" min="0" max="1" id="number" class="input-field" pattern="([0]{2})" placeholder="Enter your Number - only 2 nomber" required><!--#7-->
+				</div>
+			</section>
+<!--/div-->
+ <!-- #12 dropdown choice-->
+		<div class="labels">
+			<label for="work-study">Are you currently studying or working?</label>
+		</div>
+		<div>
+			<select id="dropdown" name="work-study" class="dropdown">
+				<option disabled value>Select an option</option>
+				<option value="student">Student</option>
+				<option value="job">Full Time Job</option>
+				<option value="learner">Full Time Learner</option>
+				<option value="other">Other</option>
+			</select>
+		</div>
+ <!--/div-->
+ <!-- #13 group radiobutton-->
+		<div class="labels">
+			<label for="userRating">Independently study programming for you</label>
+		</div>
+            <ul style="list-style: none;">
+					<li class="radio"><label>Definitely yes<input name="radio-buttons" value="1"  type="radio" class="userRatings" ></label></li>
+					<li class="radio"><label>Maybe<input name="radio-buttons" value="2"  type="radio" class="userRatings" ></label></li>
+					<li class="radio"><label>Not sure<input name="radio-buttons" value="3"  type="radio" class="userRatings" ></label></li>
+			</ul>
+ <!--/div-->
+ <!-- #14 group series of checkboxes-->  
+	   <div class="labels">
+			<label for="preferences">Things that should be improved in the future<br>(Check all that apply):</label>
+		</div>
+			<ul id="preferences" style="list-style: none">
+				<li class="checkbox">
+					<label><input name="prefer" value="1" type="checkbox" class="userRatings">Front-end Projects</label>
+				</li>
+				<li class="checkbox">
+					<label><input name="prefer" value="2" type="checkbox" class="userRatings">Back-end Projects</label>
+				</li>
+			</ul>
+<!--/div-->
+<!-- #15 textarea comments-->
+		<div class="labels">
+			<label for="comments">Any Comments or Suggestions?</label>
+		</div>
+            <textarea id="comments" class="input-field" style="height:100px;resize:horizontal" name="comment" placeholder="Enter your comment here...">
+			</textarea>
+<!--/div-->
+<!-- #16 submit-->
+		<div>
+			<button id="submit" type="submit">Submit</button>
+		</div>
+	</form>
+</div>
+</body>
+</html>
